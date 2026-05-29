@@ -1222,3 +1222,49 @@ body.dark .timeline-item.education-item .timeline-sub {
   .about-grid { grid-template-columns: 1fr; }
   .skills-categories { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 1024px) {
+  .hero {
+    overflow: visible;
+  }
+  /* Contain blobs differently so they don't escape the page */
+  .blob-1, .blob-2 {
+    opacity: 0.15;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-photo-wrap {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Make the ring not bleed outside viewport */
+  .hero-photo-ring {
+    inset: -6px;
+    border-radius: 22px;
+  }
+
+  .hero-photo-box {
+    width: min(280px, 80vw);   /* fluid — never wider than viewport */
+    height: auto;
+    aspect-ratio: 3 / 4;      /* keeps portrait shape without fixed px height */
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-photo-box {
+    width: min(220px, 75vw);
+    aspect-ratio: 3 / 4;
+    height: auto;              /* override the old fixed height: 290px */
+  }
+}
