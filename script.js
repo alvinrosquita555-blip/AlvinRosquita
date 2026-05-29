@@ -10,10 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('section[id]');
 
   function onScroll() {
-    // Scrolled class for shadow
     navbar.classList.toggle('scrolled', window.scrollY > 20);
 
-    // Active nav link based on current section in view
     let current = '';
     sections.forEach(sec => {
       const top = sec.offsetTop - 90;
@@ -36,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinksEl.classList.toggle('open');
   });
 
-  // Close mobile menu on link click
   navLinksEl.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('open');
@@ -53,24 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('dark', dark);
     localStorage.setItem('theme', dark ? 'dark' : 'light');
 
-    // Switch profile photo based on theme
     const heroPhoto = document.querySelector('.hero-photo');
     if (heroPhoto) {
-      // Add a smooth transition effect
       heroPhoto.classList.add('switching');
-      
       setTimeout(() => {
         heroPhoto.src = dark ? 'Me2.jpg' : 'Me1.jpg';
-        
-        // Ensure the new image is loaded before showing it again
-        heroPhoto.onload = () => {
-          heroPhoto.classList.remove('switching');
-        };
+        heroPhoto.onload = () => heroPhoto.classList.remove('switching');
+        // Fallback: if already cached, onload won't fire
+        if (heroPhoto.complete) heroPhoto.classList.remove('switching');
       }, 300);
     }
   }
 
-  // Apply saved or system preference
   if (savedTheme === 'dark' || (!savedTheme && prefersDark)) setTheme(true);
 
   themeToggle.addEventListener('click', () => {
@@ -125,7 +116,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', checkAOS, { passive: true });
   window.addEventListener('resize', checkAOS, { passive: true });
-  checkAOS();
+  // Small delay so browser has one paint cycle to measure positions correctly
+  // before the initial AOS check — fixes above-the-fold elements needing scroll
+  setTimeout(checkAOS, 100);
 
   // ── Contact form ────────────────────────────────────
   const contactForm = document.getElementById('contactForm');
@@ -137,12 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const btn = contactForm.querySelector('button[type="submit"]');
       const formData = new FormData(contactForm);
-      
+
       btn.disabled = true;
       btn.querySelector('span').textContent = 'Sending…';
 
       try {
-        // Replace 'YOUR_FORM_ID' with your actual Formspree ID (e.g., 'f/abcdefg')
         const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
           method: 'POST',
           body: formData,
@@ -174,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
+
   // ── Project card tilt effect ─────────────────────────
   document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
