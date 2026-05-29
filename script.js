@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       heroPhoto.classList.add('switching');
       
       setTimeout(() => {
-        heroPhoto.src = dark ? './Picture/Me2.jpg' : './Picture/Me1.jpg';
+        heroPhoto.src = dark ? 'Me2.jpg' : 'Me1.jpg';
         
         // Ensure the new image is loaded before showing it again
         heroPhoto.onload = () => {
