@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — IT Student & Software Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ───────────────── NAVBAR ───────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        Alvin Rosquita
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ───────────────── HERO ───────────────── -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+
+    <div class="container hero-inner">
+      <!-- LEFT: Photo -->
+      <div class="hero-photo-wrap" data-aos="fade-right">
+        <div class="hero-photo-ring"></div>
+        <div class="hero-photo-box">
+          <img
+            src="./Picture/Me1.jpg"
+            alt="Profile Photo"
+            class="hero-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="hero-photo-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="30" r="16" stroke="#225FBF" stroke-width="2.5" stroke-dasharray="5 3"/>
+              <path d="M12 68c0-15.464 12.536-28 28-28s28 12.536 28 28" stroke="#225FBF" stroke-width="2.5" stroke-dasharray="5 3" stroke-linecap="round"/>
+            </svg>
+            <p>Add Your Photo Here</p>
+            <small>Replace <code>./Me1.jpg</code></small>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Text -->
+      <div class="hero-text" data-aos="fade-left">
+        <h1 class="hero-heading">
+          Hello, I'm<br/>
+          <span class="hero-name gradient-text">Alvin Rosquita</span>
+        </h1>
+        <div class="hero-role-wrap">
+          <span class="hero-role" id="heroRole">IT Student</span>
+          <span class="role-cursor">|</span>
+        </div>
+        <p class="hero-desc">
+          I’m an Information Technology student who views software engineering as an art form. I thrive on dissecting complex technical challenges and rebuilding them into clean, scalable, and purposeful code. Whether I'm developing software systems or architecting intelligent automation pipelines, I focus on building software that lasts.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#contact" class="btn btn-primary">
+            <span>Let's Connect</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">1</span>
+            <span class="stat-label">Project Built</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Tech Stacks</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Years Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ───────────────── ABOUT ───────────────── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="about-icon-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          </div>
+          <h3>Continuous Learner</h3>
+          <p>I am driven by a curiosity for emerging technologies and best practices, proactively seeking new challenges and learning opportunities to ensure my skills remain at the cutting edge of industry standards.</p>
+        </div>
+        <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="about-icon-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3>Impact-Driven Developer</h3>
+          <p>My focus extends beyond technology; I strive to deeply understand user needs and business goals. This perspective enables me to build software that not only functions efficiently but also delivers measurable, meaningful value to stakeholders.</p>
+        </div>
+        <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="about-icon-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+          </div>
+          <h3>Team Collaborator</h3>
+          <p>I thrive in agile, cross-functional teams. Clear communication, code reviews, and shared ownership are values I carry into every sprint.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── EXPERIENCE ───────────────── -->
+  <section class="timeline-section section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Professional Path</span>
+        <h2 class="section-title">My <span class="gradient-text">Experience</span></h2>
+      </div>
+
+      <div class="timeline">
+        <!-- Item 1 -->
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-year">2026 — Present</span>
+              <span class="timeline-badge badge-current">Current</span>
+            </div>
+            <h3 class="timeline-title">Student Developer</h3>
+            <p class="timeline-sub">Freelance / Independent Projects</p>
+            <p class="timeline-desc">Designing and implementing custom software solutions, focusing on performance, scalability, and modern user experiences. Managing end-to-end development cycles from concept to deployment.</p>
+            <div class="timeline-tags">
+              <span class="tag tag-react">Team Collaborator</span>
+              <span class="tag tag-java">Architecture</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-year">2023</span>
+              <span class="timeline-badge badge-intern">SPES Intern</span>
+            </div>
+            <h3 class="timeline-title">SPES (Special Program for Employment of Students)</h3>
+            <p class="timeline-sub">Municipality of Alcala, Pangasinan</p>
+            <p class="timeline-desc">Assisted in administrative operations and community service initiatives under the local government unit. Gained hands-on experience in public service, document processing, and workplace professional ethics.</p>
+            <div class="timeline-tags">
+              <span class="tag tag-tail">Public Service</span>
+              <span class="tag tag-git">Administrative Support</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-year">2023</span>
+              <span class="timeline-badge badge-intern">Work Immersion</span>
+            </div>
+            <h3 class="timeline-title">IT Technical Intern</h3>
+            <p class="timeline-sub">PANELCO (Pangasinan I Electric Cooperative, Inc.)</p>
+            <p class="timeline-desc">Collaborated with the IT department to maintain corporate network infrastructure and provide hardware/software troubleshooting. Gained hands-on experience in enterprise IT operations and system maintenance within a high-stakes utility environment.</p>
+            <div class="timeline-tags">
+              <span class="tag tag-git">Network Troubleshooting</span>
+              <span class="tag tag-java">System Admin</span>
+              <span class="tag tag-tail">IT Operations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── EDUCATION ───────────────── -->
+  <section class="timeline-section section" id="education">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+      </div>
+
+      <div class="timeline">
+        <!-- Item 2 (Education) -->
+        <div class="timeline-item education-item" data-aos="fade-right" data-aos-delay="100">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-year">2023 — 2026</span>
+              <span class="timeline-badge badge-edu">Education</span>
+            </div>
+            <h3 class="timeline-title">Bachelor of Science in Information Technology</h3>
+            <p class="timeline-sub">STI College Global City</p>
+            <p class="timeline-desc">Specializing in Full-Stack Development and Software Architecture. Actively engaged in building scalable applications and mastering modern frameworks while maintaining a consistent track record of academic excellence.</p>
+            <div class="timeline-tags">
+              <span class="tag tag-java">BSIT</span>
+              <span class="tag tag-tail">College</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="timeline-item education-item" data-aos="fade-right" data-aos-delay="200">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-year">2020-2023</span>
+              <span class="timeline-badge badge-edu">Senior High</span>
+            </div>
+            <h3 class="timeline-title">TVL — Information & Communications Technology</h3>
+            <p class="timeline-sub">Phinma Upang College of Urdaneta</p>
+            <p class="timeline-desc">Graduated with High Honors. Developed a robust technical foundation in computer programming, database fundamentals, and computer system servicing (CSS), setting the stage for advanced IT studies.</p>
+            <div class="timeline-tags">
+              <span class="tag tag-java">High Honors</span>
+              <span class="tag tag-tail">TVL ICT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── PROJECTS ───────────────── -->
+  <section class="projects section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title"><span class="gradient-text">Projects</span></h2>
+        <p class="section-sub">This is the system we just created.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img-wrap">
+            <img 
+              src="./Picture/MedtrackLogo.png" 
+              alt="Medtrack Logo" 
+              class="project-img" 
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="project-img-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <span>Medtrack System</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Attendee (Medtrack)</h3>
+            <p class="project-desc">Me and my team built a mobile and web application for a pharmaceutical company where they are allowed to manage their employees, performance, attendance, and stocks.</p>
+            <div class="project-tags">
+              <span class="tag tag-xml">XML</span>
+              <span class="tag tag-kotlin">Kotlin</span>
+              <span class="tag tag-python">Python</span>
+              <span class="tag tag-html">HTML</span>
+              <span class="tag tag-css">CSS</span>
+              <span class="tag tag-javascript">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── SKILLS ───────────────── -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title"><span class="gradient-text">Skills</span></h2>
+      </div>
+
+      <div class="skills-categories">
+
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-group-header">
+            <div class="skill-group-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+            </div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="skill-chip tag tag-python chip-python">
+              <svg class="chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+              Python
+              <span class="skill-chip-tooltip">Intermediate</span>
+            </div>
+            <div class="skill-chip tag tag-java chip-java">
+              <svg class="chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+              Java
+              <span class="skill-chip-tooltip">Intermediate</span>
+            </div>
+            <div class="skill-chip tag tag-javascript chip-javascript">
+              <svg class="chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              JavaScript
+              <span class="skill-chip-tooltip">Intermediate</span>
+            </div>
+            <div class="skill-chip tag tag-html chip-html">
+              <svg class="chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              HTML
+              <span class="skill-chip-tooltip">Intermediate</span>
+            </div>
+            <div class="skill-chip tag tag-css chip-css">
+              <svg class="chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              CSS
+              <span class="skill-chip-tooltip">Intermediate</span>
+            </div>
+            <div class="skill-chip tag tag-sql chip-sql">
+              <svg class="chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              SQL
+              <span class="skill-chip-tooltip">Intermediate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-group-header">
+            <div class="skill-group-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44C9.76 2 8 3.76 8 5.88c0 1.5.8 2.8 2 3.53L12 12l2-2.59c1.2-1.2 2-2.5 2-3.53C16 3.76 14.24 2 12.22 2zM12 12l-2 2.59c-1.2 1.2-2 2.5-2 3.53C8 20.24 9.76 22 12.22 22h.44c2.02 0 3.78-1.76 3.78-3.88 0-1.5-.8-2.8-2-3.53L12 12z"/></svg>
+            </div>
+            <h3>Creative Skills</h3>
+          </div>
+          <div class="skill-description">
+            <p class="skill-description-text"><strong>Video Editing & Content Creation:</strong> Proficient in producing engaging, high-quality video content using CapCut to optimize pacing, transitions, and visual storytelling.</p>
+            <p class="skill-description-text" style="margin-bottom: 0;"><strong>Dance Instruction & Choreography:</strong> Experienced in breakdown techniques, guiding teams through complex movement sequences, and organizing creative performance layouts.</p>
+          </div>
+        </div>
+
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-group-header">
+            <div class="skill-group-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></svg>
+            </div>
+            <h3>Tools & Infrastructure</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="skill-chip tag tag-firebase chip-firebase">
+              <svg class="chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+              Firebase
+              <span class="skill-chip-tooltip">Intermediate</span>
+            </div>
+            <div class="skill-chip tag tag-mongo chip-mongodb">
+              <svg class="chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 2 7a7 7 0 0 1-10 11z"/><path d="M9 20l-5-4 3-3"/></svg>
+              MongoDB
+              <span class="skill-chip-tooltip">Intermediate</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ───────────────── CONTACT ───────────────── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-sub">Have a project idea, internship opportunity, or just want to chat tech? I'm always open to conversations.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="contact-form-wrap" data-aos="fade-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Juan dela Cruz" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="juan@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Collaboration / Internship" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your idea or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Send Message</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form-success" id="formSuccess">
+              ✅ Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info" data-aos="fade-left">
+          <div class="contact-info-card">
+            <h3>Reach Me Directly</h3>
+            <p>Prefer to skip the form? Connect with me through any of these platforms.</p>
+
+            <div class="social-links">
+              <a href="https://github.com/alvinrosquita555-blip" target="_blank" class="social-link" aria-label="GitHub">
+                <div class="social-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </div>
+                <div class="social-text">
+                  <span class="social-name">GitHub</span>
+                  <span class="social-handle">alvinrosquita555-blip</span>
+                </div>
+              </a>
+
+              <a href="mailto:alvinrosquita555@gmail.com" class="social-link" aria-label="Email">
+                <div class="social-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="social-text">
+                  <span class="social-name">Email</span>
+                  <span class="social-handle">alvinrosquita555@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://maps.google.com" target="_blank" class="social-link" aria-label="Location">
+                <div class="social-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <div class="social-text">
+                  <span class="social-name">Location</span>
+                  <span class="social-handle">Taguig, Philippines</span>
+                </div>
+              </a>
+
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── FOOTER ───────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        Alvin Rosquita
+      </div>
+      <p class="footer-copy">© 2025 Alvin Rosquita · Built with passion & precision</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
